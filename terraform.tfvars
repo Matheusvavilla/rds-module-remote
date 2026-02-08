@@ -7,7 +7,7 @@ instance_class    = "db.t4g.micro"
 storage_type      = "gp2"
 allocated_storage = "10"
 username          = "mvadba"
-password          = "Welcome#123"
+password          = "Welcome#1234"
 
 #manage_master_user_password = true
 backup_retention_period = 0
