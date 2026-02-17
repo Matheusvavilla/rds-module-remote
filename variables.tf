@@ -28,6 +28,18 @@ variable "engine_version" {
   type        = string
 }
 
+variable "allow_major_version_upgrade" {
+  description = "Upgrade major version"
+  type        = bool
+  default     = true
+}
+
+variable "blue_green_update" {
+  description = "Habilitando deploymente blue green"
+  type        = bool
+  default     = false
+}
+
 variable "instance_class" {
   description = "Instance class do banco de dados, exemplo db.m6g.large"
   type        = string
@@ -47,6 +59,10 @@ variable "username" {
   description = "Nome do usuário master"
   type        = string
   default     = "dba"
+}
+variable "password" {
+  description = "Senha do usuário com permissões master."
+  type        = string
 }
 
 variable "manage_master_user_password" {
@@ -95,6 +111,8 @@ variable "db_parameters" {
 }
 
 #####Variable Options Group
+/*
+Necessário desabilitar o option group customizado para realizar a criação do blue/green que aceita apenas o default
 variable "major_engine_version" {
   description = "Versão major do seu database para criação do Options Group dinâmico"
   type        = string
@@ -110,3 +128,4 @@ variable "db_options" {
   }))
   default = [] #Torna o options group opcional 
 }
+*/
